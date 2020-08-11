@@ -193,9 +193,6 @@ function annoyingSong(startingNum) {
 
 annoyingSong(103);
 
-
-
-
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
@@ -227,7 +224,20 @@ console.log(grade(94));
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
+function countVowels(input) {
+    // I read up on the .includes() method, and think that it's a nice way to do it. But, I initially wrote it like this, so hopefully that is okay. 
+    let array = Array.from(input.toLowerCase());
+    let vowelCount = 0;
 
+    for (i = 0; i < array.length; i++) {
+        if (array[i] === 'a' || array[i] === 'e' || array[i] === 'i' || array[i] === 'o' || array[i] === 'u') {
+            vowelCount++;
+        }
+    }
+    return vowelCount;
+}
+
+console.log(countVowels("Hello world. How are yOu?"));
 
 
 
