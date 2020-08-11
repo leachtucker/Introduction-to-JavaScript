@@ -166,22 +166,32 @@ console.log(rockPaperScissors('rock'));
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
+function kilometersToMiles(kilometers) {
+    return kilometers * 0.621371;
+}
 
-
-
+console.log(kilometersToMiles(293));
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
+function feetToCentimeters(feet) {
+    return feet * 30.48;
+}
 
-
-
+console.log(feetToCentimeters(20));
 
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
+function annoyingSong(startingNum) {
+    for (i = startingNum; i >= 1; i--) {
+        console.log(i + " bottles of soda on the wall. " + i + " bottles of soda. Take one down, pass it around. ");
+    }
+}
 
+annoyingSong(103);
 
 
 
@@ -195,7 +205,21 @@ console.log(rockPaperScissors('rock'));
 //60s should be D 
 //and anything below 60 should be F
 
+function grade(percent) {
+    if (percent >= 90) {
+        return 'A';
+    } else if (percent >= 80) {
+        return 'B';
+    } else if (percent >= 70) {
+        return 'C';
+    } else if (percent >= 60) {
+        return 'D';
+    } else {
+        return 'F';
+    }
+}
 
+console.log(grade(94));
 
 
 
