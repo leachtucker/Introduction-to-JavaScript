@@ -2,11 +2,9 @@
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 let votingAge = 18;
 if (votingAge => 18) {
-    // Changed the conditional statement to reflect that the voting age (USA) is 18 *and older*
+    // Changed the conditional statement to reflect that the voting age (USA) is *18 and older*
     console.log(true);
 }
-
-
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 let capacity = 'Under capacity';
@@ -15,7 +13,6 @@ let occupancy = 10;
 if (occupancy > 25) {
     capacity = 'Over capacity';
 }
-
 console.log(capacity);
 
 
@@ -29,7 +26,6 @@ console.log(num1);
 function multiplyFunc(a, b) {
     return a * b;
 }
-
 console.log(multiplyFunc(2, 5));
 
 
@@ -39,7 +35,6 @@ console.log(multiplyFunc(2, 5));
 function convertToDogYears(humanAge) {
     return humanAge / 7;
 }
-
 console.log(convertToDogYears(20));
 
 
@@ -84,7 +79,6 @@ function dogFeeder(weight, age) {
             rawFood = 0.02 * weight;
         }
     }
-
     return rawFood;
 }
 
@@ -150,18 +144,13 @@ function rockPaperScissors(userTool) {
         } else {
             gameMessage = "An error has occured";
         }
-
     } else {
         // User did not chose from the valid options (rock, paper, or scissors)
         gameMessage = "Please choose from rock, paper, or scissors.";
     }
-
     return gameMessage;
-
 }
-
 console.log(rockPaperScissors('rock'));
-
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
@@ -169,17 +158,13 @@ console.log(rockPaperScissors('rock'));
 function kilometersToMiles(kilometers) {
     return kilometers * 0.621371;
 }
-
 console.log(kilometersToMiles(293));
-
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
 function feetToCentimeters(feet) {
     return feet * 30.48;
 }
-
 console.log(feetToCentimeters(20));
-
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
@@ -201,7 +186,6 @@ annoyingSong(103);
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-
 function grade(percent) {
     if (percent >= 90) {
         return 'A';
@@ -215,10 +199,7 @@ function grade(percent) {
         return 'F';
     }
 }
-
 console.log(grade(94));
-
-
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
@@ -236,11 +217,7 @@ function countVowels(input) {
     }
     return vowelCount;
 }
-
 console.log(countVowels("Hello world. How are yOu?"));
-
-
-
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
