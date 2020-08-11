@@ -59,9 +59,38 @@ console.log(convertToDogYears(20));
 // 4 - 7 months 5% of their body weight 
 // 7 - 12 months 4% of their body weight
 
+function dogFeeder(weight, age) {
+    let ageMonths = age * 12; // Age is in years, so we will quickly convert that to months to compare more easily and make our code more readible
+    let rawFood = null;
+
+    if (ageMonths < 12) {
+        // Dog is a puppy
+        if (ageMonths < 4 && ageMonths >= 2) {
+            rawFood = 0.1 * weight;
+        } else if (ageMonths <= 4) {
+            rawFood = 0.05 * weight;
+        } else if (ageMonths <= 7) {
+            rawFood = 0.04 * weight;
+        }
+    } else {
+        // Dog is an adult
+        if (weight <= 5) {
+            rawFood = 0.05 * weight;
+        } else if (weight <= 10) {
+            rawFood = 0.04 * weight;
+        } else if (weight <= 15) {
+            rawFood = 0.03 * weight;
+        } else if (weight > 15) {
+            rawFood = 0.02 * weight;
+        }
+    }
+
+    return rawFood;
+}
+
+
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-
-
+console.log(dogFeeder(15, 1));
 
 
 
