@@ -100,8 +100,67 @@ console.log(dogFeeder(15, 1));
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+function rockPaperScissors(userTool) {
 
+    let userToolLC = userTool.toLowerCase(); // Converts the user's input to lowercase
+    let gameMessage = null
 
+    // Verifying user has chosen a valid tool (rock, paper, or scissors)
+    if (userToolLC === 'scissors' || userToolLC === 'rock' || userToolLC === 'paper') {
+        let opponetTool = null;
+        let randomNum = Math.floor(Math.random() * 3); // Generates a random integer 0-2 (inclusive)
+
+        // Picking a tool depending on the random number generated
+
+        if (randomNum === 0) {
+            opponetTool = 'scissors';
+        } else if (randomNum === 1) {
+            opponetTool = 'rock';
+        } else if (randomNum === 2) {
+            opponetTool = 'paper';
+        } else {
+            gameMessage = "An error has occured";
+        }
+
+        // Game logic
+        if (opponetTool === 'scissors') {
+            if (userToolLC === 'rock') {
+                gameMessage = "You won! Opponent's tool: " + opponetTool;
+            } else if (userToolLC === 'scissors') {
+                gameMessage = "Tie!"
+            } else {
+                gameMessage = "You lost. Opponenet's tool: " + opponetTool;
+            }
+        } else if (opponetTool === 'rock') {
+            if (userToolLC === 'paper') {
+                gameMessage = "You won! Opponent's tool: " + opponetTool;
+            } else if (userToolLC === 'rock') {
+                gameMessage = "Tie!"
+            } else {
+                gameMessage = "You lost. Opponenet's tool: " + opponetTool;
+            }
+        } else if (opponetTool === 'paper') {
+            if (userToolLC === 'scissors') {
+                gameMessage = "You won! Opponent's tool: " + opponetTool;
+            } else if (userToolLC === 'paper') {
+                gameMessage = "Tie!"
+            } else {
+                gameMessage = "You lost. Opponenet's tool: " + opponetTool;
+            }
+        } else {
+            gameMessage = "An error has occured";
+        }
+
+    } else {
+        // User did not chose from the valid options (rock, paper, or scissors)
+        gameMessage = "Please choose from rock, paper, or scissors.";
+    }
+
+    return gameMessage;
+
+}
+
+console.log(rockPaperScissors('rock'));
 
 
 /************************************************************** Task 5 **************************************************************/
